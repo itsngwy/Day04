@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+// Main and ExamReporter
+
 public class ExamReporter {
 
     private Map<String, List<List<Integer>>> dataSet = new HashMap<>(); 
@@ -48,14 +50,19 @@ public class ExamReporter {
 
     private void addToReport(String group, int math, int read, int write) {
         if (!dataSet.containsKey(group)) {
+            // Eg it puts group A into the key and then make a List<List<Integer>>
             dataSet.put(group, mkEntry());
         }
+        // It uses the key value eg group A to get the list of values
         List<List<Integer>> entry = dataSet.get(group);
+
+        // Then based on the values, it adds 
         entry.get(0).add(math);
         entry.get(1).add(read);
         entry.get(2).add(write);
     }
 
+    // This creates an entry of 3 integer list for each line of data read
     private List<List<Integer>> mkEntry() {
         List<List<Integer>> catList = new LinkedList<>();
         // 0 - math, 1 - read, 2 -write

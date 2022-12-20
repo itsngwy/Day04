@@ -2,6 +2,9 @@ package myapp.core;
 
 import java.util.UUID;
 
+
+// MapMain, MapMain2 and BankAccount
+
 public class BankAccount {
 
     private String name;

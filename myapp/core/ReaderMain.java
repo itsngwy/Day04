@@ -9,11 +9,13 @@ import java.io.Reader;
 public class ReaderMain {
 
     // java ReaderMain text_file
+    // java myapp.core.ReaderMain exams.csv to run
     public static void main(String[] args) 
             throws FileNotFoundException, IOException {
 
         String srcFile = args[0];
-
+        
+        // FileReader is meant for reading streams of characters. 
         Reader reader = new FileReader(srcFile);
         BufferedReader br = new BufferedReader(reader);
 
